@@ -27,4 +27,5 @@ gem 'massive_record'
 
 group :test do
   gem 'rspec-rails'
+  gem 'database_cleaner', :git => 'git://github.com/CompanyBook/database_cleaner.git'
 end

@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/CompanyBook/database_cleaner.git
+  revision: 65ee4039cd02e3d9cf86eca25627a6248569c100
+  specs:
+    database_cleaner (0.6.5)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -115,6 +121,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-script
+  database_cleaner!
   jquery-rails
   massive_record
   rails (= 3.1.0.rc1)
