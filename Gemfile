@@ -22,10 +22,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem 'massive_record'
-
+gem 'massive_record', :git => 'git://github.com/CompanyBook/massive_record.git', :branch => :develop
 
 group :test do
   gem 'rspec-rails'
   gem 'database_cleaner', :git => 'git://github.com/CompanyBook/database_cleaner.git'
+  gem 'machinist', '>= 2.0.0.beta2'
 end
