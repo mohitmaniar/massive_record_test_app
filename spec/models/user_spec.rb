@@ -16,4 +16,30 @@ describe User do
     subject.save!
     User.find(subject.id).should eq subject
   end
+
+
+  describe "#cars" do
+    let(:car) { Car.make }
+
+    it "assigns cars" do
+      subject.cars << car
+      subject.cars.should include car
+    end
+
+    context "when user is persisted" do
+      before { subject.save!  }
+
+      it "assigns and persists cars" do
+        subject.cars << car
+        car.should be_persisted
+      end
+
+      it "load and returns cars from database" do
+        subject.cars << car
+        subject.cars.reset
+        subject.cars.should_not be_loaded
+        subject.cars.should include car
+      end
+    end
+  end
 end

@@ -1,11 +1,8 @@
-class User < MassiveRecord::ORM::Table
-  references_many :cars, :store_in => :info
-
+class Car < MassiveRecord::ORM::Table
   column_family :info do
-    field :name
+    field :brand
+    field :color
   end
-
-  validates_presence_of :name
 
 
 
