@@ -23,3 +23,8 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'massive_record'
+
+
+group :test do
+  gem 'rspec-rails'
+end
