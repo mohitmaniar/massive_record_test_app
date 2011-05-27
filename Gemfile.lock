@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/CompanyBook/massive_record.git
-  revision: 9bb9d5665bb5f7445c0cdaf955b6f434106842e8
+  revision: edcd0b6d24c248ef33c54847126dc79531aed975
   branch: develop
   specs:
     massive_record (0.2.1)
