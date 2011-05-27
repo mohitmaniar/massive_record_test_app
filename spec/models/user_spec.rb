@@ -11,4 +11,9 @@ describe User do
       subject.should have(1).error_on :name
     end
   end
+
+  it "saves successfully" do
+    subject.save!
+    User.find(subject.id).should eq subject
+  end
 end
