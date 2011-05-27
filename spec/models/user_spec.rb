@@ -8,7 +8,7 @@ describe User do
 
     it "should be invalid without a name" do
       subject.name = nil
-      subject.should have(1).error_on :name
+      should have(1).error_on :name
     end
   end
 
@@ -39,6 +39,31 @@ describe User do
         subject.cars.reset
         subject.cars.should_not be_loaded
         subject.cars.should include car
+      end
+    end
+  end
+
+
+  describe "#emails" do
+    let(:email) { Email.make(:owner => subject) }
+    
+    it "assigns emails" do
+      subject.emails << email
+      subject.emails.should include email
+    end
+
+    context "when user is persisted" do
+      before { subject.save!  }
+
+      it "assigns and persists emails" do
+        subject.emails << email
+        email.should be_persisted
+      end
+
+      it "load and returns emails from database" do
+        subject.emails << email
+        subject.emails.reset
+        subject.emails.should include email
       end
     end
   end

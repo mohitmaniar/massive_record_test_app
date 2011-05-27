@@ -8,3 +8,7 @@ Car.blueprint do
   brand { "Toyota" }
   color { "silver" }
 end
+
+Email.blueprint do
+  address { "user@example.com" }
+end
